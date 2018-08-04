@@ -1,4 +1,4 @@
-<div class='box'>
+<div class='box form'>
   <div class='box-title'></div>
   <div class='form'>
     <form action='/garden' method='post'>
@@ -46,7 +46,7 @@
       <fieldset>
         <legend>Move the slider to show me how crazy you want the page to be</legend>
         <label for="insanity-level">How insane do you want to be</label>
-        <input type='range' id="insanity-level" name='insanity_level' min='0' max='3' />
+        <input type='range' id="insanity-level" name='insanity_level' min='0' max='3' value='0' />
       </fieldset>
 
       <fieldset>
@@ -57,18 +57,25 @@
   </div>
 </div>
 
-<div class='box'>
-  <h4>Hi {{preferences.name}} </h4>
-  <h5 class='box-title'>Likes and dislikes</h5>
+<div class='{{preferences.good_evil}}'>
+  <h3>Hi {{preferences.name}} </h3>
+  <h4 class='box-title'>Likes and dislikes</h4>
   <div class='likes'>
 
   </div>
-  <h5 class='box-title'>Biography</h5>
+  <h4 class='box-title'>Biography</h4>
+  <h5>Early Life</h5>
+  <p>Im a very {{preferences.good_evil}} girl. I grew up in {{bio.birth}}. It was {{bio.ghetto}} i know. but i loved it.</p>
+  <h5>Eduction</h5>
+  <p>I went to school at {{bio.highschool}}. Where i learned {{bio.subject}}, after school i loved to {{bio.afterschool}}
+    after high school  i went to {{bio.university}}. Where i majored in {{bio.major}}</p>
+    <h5>Personal Life</h5>
+    <p>Since i've always been a {{preferences.good_evil}} girl. I dated lots of {{preferences.good_evil}} boys</p>
   <div class='biography'>
 
   </div>
 
-  <h5 class='box-title'>Resume</h5>
+  <h4 class='box-title'>Resume</h4>
   <div class- 'resume'>
 
   </div>
